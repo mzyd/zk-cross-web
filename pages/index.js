@@ -51,6 +51,7 @@ const c7list = [
   },
 ]
 
+
 export default function Home() {
 
   const [navList, setNavList] = useState([
@@ -86,6 +87,7 @@ export default function Home() {
     // window.addEventListener('resize', handleResize)
     setIsMobile(window.innerWidth < 834)
   })
+
 
   return (
     <div className={styles.container}>
@@ -149,7 +151,7 @@ export default function Home() {
 
         {/* con2 */}
 
-        <div id="products" className={styles.con2}>
+        <div id="about" className={styles.con2}>
           <div className={styles.c2left}>
             <img alt="" src="/products.png" />
           </div>
@@ -200,7 +202,7 @@ export default function Home() {
 
         {/* con4 */}
 
-        <div className={styles.con4}>
+        <div className={styles.con4} id="products">
 
           <div className={styles.c4left}>
 
