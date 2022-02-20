@@ -31,21 +31,25 @@ const partnerList = function() {
 const c7list = [
   {
     url: '/c7/c71.png',
+    link: 'https://discord.gg/8mgBwVen',
     title: 'Discord Community',
     desc: 'Get involved with our discord community server'
   },
   {
     url: '/c7/c72.png',
+    link: 'https://twitter.com/thezkcross',
     title: 'Twitter',
     desc: 'Follow @ZKCross for the latest news and updates across the system.'
   },
   {
     url: '/c7/c73.png',
+    link: 'https://t.me/ZKCross',
     title: 'Telegram',
     desc: 'chat with the worldwide community on Telegram.'
   },
   {
     url: '/c7/c74.png',
+    link: 'https://zkcross.medium.com/',
     title: 'Medium',
     desc: 'post your thinking on ZKCross and connect with millions of readers.'
   },
@@ -291,7 +295,11 @@ export default function Home() {
               {
                 c7list.map((item, index) => {
                   return <div className={styles.c7item} key={index}>
-                    <div className={styles.c7itemtop}>
+                    <div className={styles.c7itemtop} onClick={
+                      () => {
+                        window.open(item.link)
+                      }
+                    }>
                       <div>
                         <img alt="" src={item.url} />
                       </div>
